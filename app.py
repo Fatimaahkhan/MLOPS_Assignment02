@@ -13,11 +13,11 @@ def preprocess_text(text):
     text = re.sub(r'[^a-zA-Z0-9\s-]', '', text)
     return text
 
-def fetch_and_preprocess_data():
+def fetch_and_preprocess_bbc_data():
     url = "https://www.bbc.com/news"
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
-    headlines = soup.find_all("h2", class_="sc-4fedabc7-3 zTZri")
-    descriptions = soup.find_all("p", class_="sc-b8778340-4 kYtujW")
+    headlines = soup.find_all("h3")
+    descriptions = soup.find_all("p")
 
     preprocessed_data = []
     for headline, description in zip(headlines, descriptions):
@@ -36,6 +36,27 @@ def fetch_and_preprocess_data():
     os.system("dvc add {}".format(csv_file))
     os.system("dvc push")
 
+def fetch_and_preprocess_dawn_data():
+    url = "https://www.dawn.com"
+    soup = BeautifulSoup(requests.get(url).content, "html.parser")
+    headlines = soup.find_all("h2", class_="story__title")
+    descriptions = soup.find_all("div", class_="story__excerpt")
+
+    preprocessed_data = []
+    for headline, description in zip(headlines, descriptions):
+        preprocessed_headline = preprocess_text(headline.get_text(strip=True))
+        preprocessed_description = preprocess_text(description.get_text(strip=True))
+        preprocessed_data.append((preprocessed_headline, preprocessed_description))
+
+    csv_file = "dawn_news_data.csv"
+    with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Headline", "Description"])
+        for headline, description in preprocessed_data:
+            writer.writerow([headline, description])
+    os.system("dvc add {}".format(csv_file))
+    os.system("dvc push")
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -47,16 +68,23 @@ default_args = {
 }
 
 dag = DAG(
-    'bbc_news_dag',
+    'news_data_dag',
     default_args=default_args,
-    description='Fetch and preprocess BBC News data',
+    description='Fetch and preprocess news data from BBC and Dawn',
     schedule_interval=timedelta(days=1),
 )
 
-fetch_and_preprocess_task = PythonOperator(
-    task_id='fetch_and_preprocess_task',
-    python_callable=fetch_and_preprocess_data,
+fetch_and_preprocess_bbc_task = PythonOperator(
+    task_id='fetch_and_preprocess_bbc_task',
+    python_callable=fetch_and_preprocess_bbc_data,
     dag=dag,
 )
 
-fetch_and_preprocess_task
+fetch_and_preprocess_dawn_task = PythonOperator(
+    task_id='fetch_and_preprocess_dawn_task',
+    python_callable=fetch_and_preprocess_dawn_data,
+    dag=dag,
+)
+
+fetch_and_preprocess_bbc_task >> fetch_and_preprocess_dawn_task
+
