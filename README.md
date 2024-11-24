@@ -9,8 +9,8 @@ A sample landing page with my CV.
 
  # Documentation:
 
- .[VIEW BLOG SUMMARIES][]
- .[VIEW LEARNING]
+ .[VIEW BLOG SUMMARIES](https://github.com/Fatimaahkhan/MLOPS_Assignment02/blob/main/blog_summaries.md)
+ .[VIEW LEARNING](https://github.com/Fatimaahkhan/MLOPS_Assignment02/blob/main/Guide_to_Learning_and_Contribution.md)
  .[CV]
 
 
