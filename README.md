@@ -6,6 +6,7 @@ Guide to Learning and Contribution
 View Blog Summaries
 Sample repo from the internet and applying DevOps tooling.Pick and choose (your existing) knowledge and expand it to guide.
 A sample landing page with my CV.
+
  # Documentation:
 
 
@@ -15,23 +16,29 @@ A sample landing page with my CV.
    # Key DevOps Practices Applied:
 
 1-Automation with Apache Airflow:
+
 An Airflow DAG (bbc_news_dag) automates the daily execution of data extraction and preprocessing tasks, reducing manual intervention and ensuring consistency.
 
 2-Version Control with DVC:
+
 Data Version Control (DVC) tracks versions of the preprocessed data stored in CSV files. This ensures reproducibility, collaboration, and rollback capabilities.
 
 3-Code and Workflow Management:
+
 A structured Python script (fetch_and_preprocess_data.py) performs extraction and preprocessing using libraries like BeautifulSoup and requests.
 The GitHub repository maintains documentation and code organization, following DevOps best practices for codebase management.
 
 4-Infrastructure as Code (IaC):
+
 The use of Docker simplifies setting up and running Apache Airflow, encapsulating dependencies and ensuring a consistent environment.
 
 # Step-by-Step Guide to Implementing the Workflow:
 "Setting up Environmnet
+
 . Install Python and ensure pip is available.
 
 Clone the repository:
+
 git clone <repository-url>
 cd <repository-directory>
 
@@ -76,6 +83,16 @@ Deploying applications across AWS global regions requires careful cost and laten
 To minimize expenses, businesses can leverage AWS features like Reserved Instances for long-term commitments, Savings Plans for flexible discounts, and Spot Instances for non-critical tasks. Optimizing storage through Amazon S3’s Infrequent Access and Glacier tiers can reduce costs for seldom-used data. Using AWS CloudFront minimizes data transfer expenses by caching content closer to users. Additionally, consolidating resources within a single region helps avoid cross-region transfer fees. These strategies, when aligned with specific application needs, ensure cost efficiency without compromising performance.
 
 [BLog2](https://medium.com/@fatimajamshaidkhan2/in-todays-globalized-world-ensuring-that-cloud-based-applications-are-fast-efficient-and-232c06b71450)
+
+
+# CV
+
+# Hi,'I am Fatima Jamshaid 
+As a skilled software engineer, I specialize in developing scalable applications using modern technologies, ensuring optimal performance and security. With experience in backend development, cloud computing, and system architecture, I excel in delivering high-quality solutions that meet business needs.
+
+# round_pushpin Connect With me 
+# :e-mail:fatimajamshaidkhan2@gmail.com
+
 
 
 
