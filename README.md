@@ -9,6 +9,10 @@ A sample landing page with my CV.
 
  # Documentation:
 
+ .[VIEW BLOG SUMMARIES][]
+ .[VIEW LEARNING]
+ .[CV]
+
 
    # Quick Guide to DevOps Implementation in the Data Preprocessing Workflow
 
@@ -92,6 +96,41 @@ As a skilled software engineer, I specialize in developing scalable applications
 
 # :round_pushpin: Connect With me 
 # :e-mail:fatimajamshaidkhan2@gmail.com
+# linkdin:(https://www.linkedin.com/in/fatimahhh/)
+
+# Education 🎓
+. BS Software Engineering 
+
+ .Graduation 2025
+
+ # 💡 Skills
+ Programming Languages: Python, JavaScript, C++
+ 
+AI & Machine Learning: TensorFlow, PyTorch, Scikit-Learn
+
+
+Natural Language Processing: Text Preprocessing, Sentiment Analysis, Language Models
+
+Web Development: HTML, CSS, JavaScript, React, Node.js
+
+
+
+Version Control: Git, GitHub
+
+Project Managment: Adw,aglie methadologies
+
+# 📁 Projects
+# Auto Voice Order
+"Created a auto voice order chat bot that takes order through voice and real time recognition and make process seamless and easy in resturants"
+
+# 💼 Experience
+# intern Software Developer at S&P GLOBAL 
+June 2024-Present
+
+
+
+
+
 
 
 
