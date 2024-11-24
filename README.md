@@ -90,7 +90,7 @@ To minimize expenses, businesses can leverage AWS features like Reserved Instanc
 # Hi,'I am Fatima Jamshaid 
 As a skilled software engineer, I specialize in developing scalable applications using modern technologies, ensuring optimal performance and security. With experience in backend development, cloud computing, and system architecture, I excel in delivering high-quality solutions that meet business needs.
 
-# round_pushpin Connect With me 
+# :round_pushpin: Connect With me 
 # :e-mail:fatimajamshaidkhan2@gmail.com
 
 
